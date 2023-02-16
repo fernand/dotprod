@@ -49,7 +49,7 @@ void benchmark(int8_t* embeds, int8_t* v, DotFunc func) {
         }
     }
     uint64_t t2 = clock_gettime_nsec_np(CLOCK_MONOTONIC);
-    printf("last_dot: %.3f\n", (float)last_dot);
+    printf("last_dot: %i\n", (int)last_dot);
     printf("time ms: %.2f\n", (float)(t2 - t1) / (NUM_ITER * 1e6));
 }
 
