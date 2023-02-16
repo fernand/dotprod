@@ -1,4 +1,4 @@
-// clang -O2 -ffast-math -march=native x64_int8.c -o int8 && ./int8
+// clang -O2 -march=native x64_int8.c -o int8 && ./int8
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -70,10 +70,10 @@ int main() {
     int8_t* v = malloc(SZ*sizeof(int8_t));
     srand(time(NULL));
     for (int i=0; i<SZ*NUM_VECS; ++i) {
-        embeds[i] = (int8_t)(127 + 127*(float)rand()/(float)RAND_MAX);
+        embeds[i] = (int8_t)(127*(float)rand()/(float)RAND_MAX);
     }
     for (int i=0; i<SZ; ++i) {
-        v[i] = (int8_t)(127 + 127*(float)rand()/(float)RAND_MAX);
+        v[i] = (int8_t)(127*(float)rand()/(float)RAND_MAX);
     }
 
     printf("int8 implementation with Clang codegen:\n");

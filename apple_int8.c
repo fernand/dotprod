@@ -1,4 +1,4 @@
-// clang -O2 -ffast-math -mcpu=apple-m1 int8.c -o int8 && ./int8
+// clang -O2 -mcpu=apple-m1 int8.c -o int8 && ./int8
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdio.h>
